@@ -17,6 +17,20 @@ Before running the tests, ensure you have the following installed:
 ## 🚀 Setup Instructions
 
 ### **1️⃣ Clone the Repository**
-```sh
-git clone [https://github.com/your-username/your-repository.git](https://github.com/rohits06oct/Playwrite_ApplyDigital.git)
+git clone https://github.com/rohits06oct/Playwrite_ApplyDigital.git
 cd Playwrite_ApplyDigital
+
+
+## Install Dependencies
+npm install
+npx playwright install
+
+## Running the Tests
+fnm env --use-on-cd | Out-String | Invoke-Expression
+npm run test
+
+## Test Reports
+HTML Reports → Stored in test-results/
+
+
+
