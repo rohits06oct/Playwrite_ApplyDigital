@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4300303600
+              "duration": 8477891999
             }
           },
           {
@@ -31,8 +31,9 @@
               "location": "src\\test\\steps\\shoppingSteps.ts:37"
             },
             "result": {
-              "status": "passed",
-              "duration": 31445905899
+              "status": "failed",
+              "duration": 40019128199,
+              "error_message": "Error: function timed out, ensure the promise resolves within 40000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\Rohit Singhal\\Downloads\\ApplyDigital\\Playwrite_ApplyDigital\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
             }
           },
           {
@@ -44,9 +45,8 @@
               "location": "src\\test\\steps\\shoppingSteps.ts:41"
             },
             "result": {
-              "status": "failed",
-              "duration": 3164940300,
-              "error_message": "locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//a[@href=\\'/product_details/3\\']')\u001b[22m\n\n    at ProductsPage.click (C:\\Users\\Rohit Singhal\\Downloads\\ApplyDigital\\Playwrite_ApplyDigital\\src\\test\\pages\\BasePage.ts:15:42)\n    at ProductsPage.selectThirdProduct (C:\\Users\\Rohit Singhal\\Downloads\\ApplyDigital\\Playwrite_ApplyDigital\\src\\test\\pages\\ProductsPage.ts:7:20)\n    at World.<anonymous> (C:\\Users\\Rohit Singhal\\Downloads\\ApplyDigital\\Playwrite_ApplyDigital\\src\\test\\steps\\shoppingSteps.ts:42:24)"
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -118,9 +118,9 @@
             "arguments": [],
             "keyword": "And ",
             "line": 14,
-            "name": "I confirm the order",
+            "name": "Proceed to cart and confirm the order",
             "match": {
-              "location": "src\\test\\steps\\shoppingSteps.ts:69"
+              "location": "src\\test\\steps\\shoppingSteps.ts:70"
             },
             "result": {
               "status": "skipped",
@@ -131,9 +131,22 @@
             "arguments": [],
             "keyword": "Then ",
             "line": 15,
+            "name": "Order Placed Successfully",
+            "match": {
+              "location": "src\\test\\steps\\shoppingSteps.ts:78"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
             "name": "I log out successfully",
             "match": {
-              "location": "src\\test\\steps\\shoppingSteps.ts:73"
+              "location": "src\\test\\steps\\shoppingSteps.ts:89"
             },
             "result": {
               "status": "skipped",

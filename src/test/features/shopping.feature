@@ -11,5 +11,6 @@ Feature: Shopping on Automation Exercise
   Scenario: Purchase a product as a new user
     Given I click to Register/Login button
     When I register a new user with random details
-    And I confirm the order
-    Then I log out successfully
+    And Proceed to cart and confirm the order
+    Then Order Placed Successfully
+    And I log out successfully

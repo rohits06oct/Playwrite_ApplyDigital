@@ -9,6 +9,13 @@ export default class RegisterPage extends BasePage {
     private passwordInput = "//input[@data-qa='password']";
     private firstNameInput = "input[data-qa='first_name']";
     private lastNameInput = "input[data-qa='last_name']";
+    private companyInput = "input[data-qa='company']";
+    private addressInput = "input[data-qa='address']";
+    private stateInput = "input[data-qa='state']";
+    private cityInput = "input[data-qa='city']";
+    private zipcodeInput = "input[data-qa='zipcode']";
+    private mobilenumberInput = "input[data-qa='mobile_number']";
+    private createAccBtn = "button[data-qa='create-account']";
 
     async registerRandomUser() {
         const name = faker.person.fullName();
@@ -23,6 +30,12 @@ export default class RegisterPage extends BasePage {
         const password = faker.internet.password();
         const firstName = faker.person.firstName();
         const lastName = faker.person.lastName();
+        const company = "test Company";
+        const address = faker.location.streetAddress();
+        const state = faker.location.state();
+        const city = faker.location.city();
+        const zipcode = faker.location.zipCode();
+        const mobile_number = faker.phone.number();
 
         await this.waitForElement(this.title);
         await this.click(this.title);
@@ -32,5 +45,16 @@ export default class RegisterPage extends BasePage {
         await this.page.locator('select[data-qa="years"]').selectOption({ value: "1980" });
         await this.type(this.firstNameInput, firstName);
         await this.type(this.lastNameInput, lastName);
+        await this.type(this.companyInput, company);
+        await this.type(this.addressInput, address);
+        await this.page.locator('select[data-qa="country"]').selectOption({ value: "Canada" });
+        await this.type(this.stateInput, state);
+        await this.type(this.cityInput, city);
+        await this.type(this.zipcodeInput, zipcode);
+        await this.type(this.mobilenumberInput, mobile_number);
+    }
+
+    async createAccountButton() {
+        await this.click(this.createAccBtn);
     }
 }

@@ -64,10 +64,26 @@ Given("I click to Register\\/Login button", async function () {
 When("I register a new user with random details", async function () {
     await registerPage.registerRandomUser();
     await registerPage.enterAllDetails();
+    await registerPage.createAccountButton();
 });
 
-When("I confirm the order", async function () {
+When("Proceed to cart and confirm the order", async function () {
+    await cartPage.openCartPage();
     await cartPage.proceedToCheckout();
+    await cartPage.proceedToPlaceOrder();
+    await cartPage.paymentDetails();
+    await cartPage.proceedToPay();
+});
+
+Then("Order Placed Successfully", async function () {
+    await page.waitForSelector("h2[data-qa='order-placed']", { state: "visible" });
+    const orderText = await page.textContent("h2[data-qa='order-placed']");
+    
+    if (orderText?.includes("ORDER PLACED!")) {
+        console.log("Order placed successfully!");
+    } else {
+        throw new Error("Order placement failed!");
+    }
 });
 
 Then("I log out successfully", async function () {
