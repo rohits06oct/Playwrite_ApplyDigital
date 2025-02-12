@@ -1,0 +1,155 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "shopping-on-automation-exercise;purchase-a-product-as-a-new-user",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Purchase a product as a new user",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I navigate to \"https://automationexercise.com/\"",
+            "match": {
+              "location": "src\\test\\steps\\shoppingSteps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4300303600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I go to the Products section",
+            "match": {
+              "location": "src\\test\\steps\\shoppingSteps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31445905899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I choose the third product and view its details",
+            "match": {
+              "location": "src\\test\\steps\\shoppingSteps.ts:41"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 3164940300,
+              "error_message": "locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//a[@href=\\'/product_details/3\\']')\u001b[22m\n\n    at ProductsPage.click (C:\\Users\\Rohit Singhal\\Downloads\\ApplyDigital\\Playwrite_ApplyDigital\\src\\test\\pages\\BasePage.ts:15:42)\n    at ProductsPage.selectThirdProduct (C:\\Users\\Rohit Singhal\\Downloads\\ApplyDigital\\Playwrite_ApplyDigital\\src\\test\\pages\\ProductsPage.ts:7:20)\n    at World.<anonymous> (C:\\Users\\Rohit Singhal\\Downloads\\ApplyDigital\\Playwrite_ApplyDigital\\src\\test\\steps\\shoppingSteps.ts:42:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I enter a random quantity and add the product to the cart",
+            "match": {
+              "location": "src\\test\\steps\\shoppingSteps.ts:45"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I proceed to checkout",
+            "match": {
+              "location": "src\\test\\steps\\shoppingSteps.ts:52"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should see the Register/Login modal",
+            "match": {
+              "location": "src\\test\\steps\\shoppingSteps.ts:56"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I click to Register/Login button",
+            "match": {
+              "location": "src\\test\\steps\\shoppingSteps.ts:60"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I register a new user with random details",
+            "match": {
+              "location": "src\\test\\steps\\shoppingSteps.ts:64"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I confirm the order",
+            "match": {
+              "location": "src\\test\\steps\\shoppingSteps.ts:69"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I log out successfully",
+            "match": {
+              "location": "src\\test\\steps\\shoppingSteps.ts:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "shopping-on-automation-exercise",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Shopping on Automation Exercise",
+    "tags": [],
+    "uri": "src\\test\\features\\shopping.feature"
+  }
+]
